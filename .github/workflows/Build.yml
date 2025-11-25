@@ -12,6 +12,8 @@ name: Build
 
 on:
   repository_dispatch:
+  schedule:
+    - cron: '0 1 1 * *' # 每月1号 01:00 UTC 自动运行
   workflow_dispatch:
     inputs:
       branch:
